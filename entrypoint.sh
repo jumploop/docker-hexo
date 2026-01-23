@@ -27,11 +27,15 @@ else
         hexo-generator-sitemap \
         hexo-admonition \
         hexo-generator-index \
-        gulp-clean-css gulp-uglify gulp-htmlmin gulp-htmlclean 
+        gulp-clean-css gulp-uglify gulp-htmlmin gulp-htmlclean \
+		hexo-helper-live2d live2d-widget-model-shizuku \
+		hexo-sliding-spoiler hexo-external-link hexo-abbrlink \
+		hexo-generator-index-pin-top hexo-generator-search \
+		hexo-addlink hexo-simple-mindmap hexo-generator-random
         
     #cnpm install hexo-generator-index-pin-top --save 
     #cnpm install hexo-offline --save 
-    #cnpm install hexo-web-push-notification --save 
+    cnpm install hexo-web-push-notification -	-save 
     #cnpm install highlight.js --save 
     #echo "install live2d and model weier" 
     #cnpm uninstall fsevents 
@@ -41,8 +45,8 @@ else
     #cnpm install hexo-helper-live2d --save 
     #cnpm install live2d-widget-model-lwet --save 
     #cnpm install livereload bufferutil utf-8-validate --save
-    #echo "install hexo-theme-matery" 
-    #git clone https://github.com/blinkfox/hexo-theme-matery.git /app/themes/matery; 
+    echo "install hexo-theme-matery" 
+    git clone https://github.com/blinkfox/hexo-theme-matery.git /app/themes/matery; 
 fi; 
 
 if [ ! -f /app/requirements.txt ]; then 
