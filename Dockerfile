@@ -1,7 +1,5 @@
 FROM node:latest
 
-MAINTAINER appotry <andycrusoe@gmail.com>
-
 LABEL maintainer="andycrusoe@gmail.com"
 LABEL repository="https://github.com/appotry/docker-hexo"
 LABEL homepage="https://blog.17lai.site"
@@ -12,6 +10,9 @@ ENV HEXO_SERVER_PORT=4000
 # Set the git username and email
 ENV GIT_USER="appotry"
 ENV GIT_EMAIL="andycrusoe@gmail.com"
+ENV LANG=zh_CN.UTF-8
+ENV LANGUAGE=zh_CN.UTF-8
+ENV LC_ALL=zh_CN.UTF-8
 
 # Install requirements
 RUN apt-get update && \
@@ -48,9 +49,6 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | g
     apt-get clean
 
 
-ENV LANG zh_CN.UTF-8
-ENV LANGUAGE zh_CN.UTF-8
-ENV LC_ALL zh_CN.UTF-8
 
 RUN echo 'hexo' > /etc/hostname && \
     echo 'export PS1="\[\e[37;40m\][\[\e[32;40m\]\u\[\e[37;40m\]@\h \[\e[36;40m\]\w\[\e[0m\]]\\$ "' >> /etc/profile && \
