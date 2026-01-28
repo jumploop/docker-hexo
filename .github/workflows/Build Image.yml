@@ -54,6 +54,6 @@ jobs:
           # platforms: linux/amd64
           push: true
           tags: |
-            bloodstar/hexo:stable-${{ env.version }}
-            bloodstar/hexo:latest
+            jumploop/hexo:stable-${{ env.version }}
+            jumploop/hexo:latest
 
