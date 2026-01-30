@@ -47,6 +47,8 @@ else
     #cnpm install livereload bufferutil utf-8-validate --save
     # echo "install hexo-theme-matery" 
     # git clone https://github.com/blinkfox/hexo-theme-matery.git /app/themes/matery; 
+	# Debian12 中vi/vim复制粘贴问题(关闭Vim可视模式(Visual mode))
+	sed -i 's#set mouse=a#set mouse-=a#' /usr/share/vim/vim90/defaults.vim
 fi; 
 
 if [ ! -f /app/requirements.txt ]; then 
