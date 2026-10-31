@@ -39,6 +39,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            bloodstar/hexo:latest
-            bloodstar/hexo:node20
-            bloodstar/hexo:${{ steps.hexo-version.outputs.version }}-node20
+            jumploop/hexo:latest
+            jumploop/hexo:node20
+            jumploop/hexo:${{ steps.hexo-version.outputs.version }}-node20
